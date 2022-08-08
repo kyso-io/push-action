@@ -1,0 +1,16 @@
+name: 'Push To Kyso'
+description: Action to publish a report to a Kyso Instance from Github
+inputs:
+  username:
+    description: 'Kyso User Name'
+    required: true
+  token:
+    description: 'Kyso User Token'
+    required: true
+  url:
+    description: 'Kyso Installation URL'
+    required: true
+    default: 'https://kyso.io'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
